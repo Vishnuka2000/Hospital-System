@@ -14,12 +14,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Patient {
-     @Id
-     @GeneratedValue (strategy =  GenerationType.IDENTITY)
-     private Long id;
-     private  String patientId;
-     private String name;
-     private String gender;
-     private  int age;
+public class Bill {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private Long id;
+    private String patientId;
+    private  double amount;
+    private String billingDate;
+    private  String status;
+
+
 }
