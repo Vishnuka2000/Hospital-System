@@ -1,0 +1,27 @@
+package com.example.Hospital.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Bill {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private Long id;
+    private String patientId;
+    private  double amount;
+    private String billingDate;
+    private  String status;
+
+
+}
